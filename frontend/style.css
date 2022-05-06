@@ -1,0 +1,184 @@
+/* CSS reset start */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+    background: transparent;
+    font-family: inherit;
+  }
+a{
+    text-decoration: none;
+}
+a img {
+    border: none;
+}
+
+button,
+a {
+    cursor: pointer;
+    color: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+button,
+textarea,
+select {
+    appearance: none !important;
+    border-radius: 0;
+}
+
+ol, ul, li {
+    list-style:none;display:block;
+}
+
+/* CSS reset end */
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #145434;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background-color: #ffeedf;
+    min-height: 100vh;
+    width: 100%;
+}
+
+#root header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #145434;
+}
+
+#root header .logo {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+#root header span {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+#root .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+}
+
+#root .cardContainer .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    width: 400px;
+    padding-top: 45px;
+    background-color: #145434;
+    color: #ffeedf;
+}
+
+#root .cardContainer .card .numberContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffeedf;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    height: 40px;
+    width: 40px;
+    border: 2px solid #145434;
+    border-radius: 50%;
+    font-size: 24px;
+    color: #145434;
+}
+
+#root .cardContainer .card .title {
+    height: 90px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ffeedf;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+#root .cardContainer .card .title, #root .cardContainer .card .sub, #root .cardContainer .card .text {
+    width: 80%;
+}
+
+#root .cardContainer .card .sub, #root .cardContainer .card .text {
+    font-size: 18px;
+}
+
+#root .cardContainer .card .sub {
+    font-weight: 400;
+}
+
+#root .cardContainer .card .text {
+    font-weight: 600;
+}
+
+#root .cardContainer .card button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffeedf;
+    bottom: 0;
+    right: 0;
+    transform: translate(10px, 10px);
+    height: 50px;
+    width: 200px;
+    border: 2px solid #145434;
+    font-size: 14px;
+    color: #145434;
+}
+
+#root .cardContainer .card button:hover {
+    background-color: #145434;
+    border: 2px solid #ffeedf;
+    color: #ffeedf;
+}
+
+#root .cardContainer .card button span {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    font-size: 36px;
+}
+
+@media (max-width: 920px) { 
+    #root .cardContainer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 510px) { 
+    #root .cardContainer {
+        width: 90%;
+    }
+
+    #root .cardContainer .card {
+        width: 90%;
+    }
+}
